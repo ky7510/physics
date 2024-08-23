@@ -1,0 +1,184 @@
+/* styles.css */
+
+/* Base Styles */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px #ffeb3b;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+    text-shadow: 1px 1px #000;
+}
+
+/* Content Section Styles */
+.content {
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-top: 8px solid #4CAF50;
+    border-bottom: 8px solid #4CAF50;
+}
+
+.content:hover {
+    transform: scale(1.03);
+    background-color: #e0f7fa;
+}
+
+.content h2 {
+    color: #4CAF50;
+    font-size: 2.2em;
+    border-bottom: 4px dotted #ffeb3b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.content h2::after {
+    content: '✦';
+    position: absolute;
+    right: -25px;
+    top: 0;
+    font-size: 2em;
+    color: #ff5722;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #37474f;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+    position: relative;
+    padding-left: 30px;
+    transition: color 0.3s ease;
+}
+
+.content ul li::before {
+    content: "★";
+    color: #ff5722;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.content ul li:hover {
+    color: #4CAF50;
+}
+
+.content ul li:hover::before {
+    transform: rotate(20deg);
+}
+
+/* Video and Image Styles */
+video, img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 4px solid #4CAF50;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+video:hover, img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px #ffeb3b;
+}
+
+/* Adding Background Decorations */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, rgba(76, 175, 80, 0.2) 25%, transparent 25%, transparent 50%, rgba(76, 175, 80, 0.2) 50%, rgba(76, 175, 80, 0.2) 75%, transparent 75%, transparent);
+    background-size: 50px 50px;
+    z-index: -1;
+}
