@@ -184,6 +184,11 @@ video, img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+video, img {
+    width: 100%;
+    height: auto;
+    }
+
 video:hover, img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -217,4 +222,80 @@ body::before {
     background-image: linear-gradient(45deg, rgba(76, 175, 80, 0.2) 25%, transparent 25%, transparent 50%, rgba(76, 175, 80, 0.2) 50%, rgba(76, 175, 80, 0.2) 75%, transparent 75%, transparent);
     background-size: 50px 50px;
     z-index: -1;
+}
+
+/* General styles for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    .content {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
+    }
+
+    .content p, .content ul li {
+        font-size: 1em;
+    }
+
+    form button {
+        width: 100%;
+        font-size: 1em;
+    }
+}
+
+/* For very small screens like phones in portrait mode */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .content {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .content h2 {
+        font-size: 1.4em;
+    }
+
+    .content p, .content ul li {
+        font-size: 0.9em;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
