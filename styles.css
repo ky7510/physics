@@ -22,6 +22,42 @@ header {
     z-index: 1000;
 }
 
+/* Quiz Section */
+form {
+    margin-top: 20px;
+}
+
+form p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#quiz-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 header h1 {
     font-size: 2.8em;
     margin: 0;
