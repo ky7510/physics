@@ -42,3 +42,6 @@ document.querySelectorAll('.content').forEach(section => {
         const sectionTitle = section.querySelector('h2').innerText;
     });
 });
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav ul').classList.toggle('show-menu');
+});
