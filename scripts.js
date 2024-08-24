@@ -3,7 +3,6 @@
 document.querySelectorAll('.content').forEach(section => {
     section.addEventListener('click', () => {
         const sectionTitle = section.querySelector('h2').innerText;
-        alert(`استكشاف المزيد حول: ${sectionTitle}`);
     });
 });
 document.querySelectorAll('video').forEach(video => {
